@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVADAL TECH | Custom Technology Solutions for Nnewi Businesses | AI, Automation & Websites</title>
+    <meta name="description" content="From Google visibility to local AI agents - PROVADAL TECH builds custom solutions for Nnewi businesses. GBP management ₦10K/mo, websites ₦75K-800K, AI automation, hardware repair, co-working space.">
+    <link rel="canonical" href="https://provadal.com/">
+    <link rel="icon" type="image/png" href="logo-100px.png">
+    <meta property="og:title" content="PROVADAL TECH | Custom Technology Solutions Nnewi">
+    <meta property="og:description" content="Local AI agents, computer vision, automation, websites & hardware for Nigerian businesses.">
+    <meta property="og:image" content="https://provadal.com/og-image.jpg">
+    <meta property="og:url" content="https://provadal.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PROVADAL TECH - Custom Technology Solutions Nnewi, Anambra">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://provadal.com/og-image.jpg">
+    <meta name="twitter:title" content="PROVADAL TECH | Custom Technology Solutions Nnewi">
+    <meta name="twitter:description" content="From Google visibility to local AI agents. GBP ₦10K/mo, websites ₦75K-800K, AI automation.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+           DESIGN.md SYSTEM — Anti-AI-Slop Professional Design
+           Based on Stripe/Linear/Vercel patterns
+        ═══════════════════════════════════════════════════════════ */
+        
+        :root {
+            /* Brand Colors — PROVADAL */
+            --gold: #C2A772;
+            --deep-blue: #2D4C6F;
+            --knotwork-blue: #3F679B;
+            --cream: #EBE6DF;
+            
+            /* Neutrals (80% of design) */
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            
+            /* Spacing Rhythm — 8px base */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 16px;
+            --space-4: 24px;
+            --space-5: 32px;
+            --space-6: 48px;
+            --space-7: 64px;
+            --space-8: 80px;
+            --space-10: 120px;
+            
+            /* Typography Scale — 1.250 ratio */
+            --text-xs: 0.64rem;
+            --text-sm: 0.8rem;
+            --text-base: 1rem;
+            --text-lg: 1.25rem;
+            --text-xl: 1.563rem;
+            --text-2xl: 1.953rem;
+            --text-3xl: 2.441rem;
+            --text-4xl: 3.052rem;
+            
+            /* Motion */
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            font-size: var(--text-base);
+            line-height: 1.7;
+            color: var(--gray-800);
+            background: white;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', -apple-system, sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--deep-blue);
+            letter-spacing: -0.01em;
+        }
+        
+        h1 { font-size: var(--text-4xl); margin-bottom: var(--space-4); }
+        h2 { font-size: var(--text-3xl); margin-bottom: var(--space-4); }
+        h3 { font-size: var(--text-2xl); margin-bottom: var(--space-3); }
+        
+        p { 
+            max-width: 70ch; 
+            margin-bottom: var(--space-4);
+        }
+        
+        a {
+            color: var(--knotwork-blue);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover { color: var(--gold); }
+        a:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+        
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--gold);
+            color: white;
+            padding: var(--space-2) var(--space-3);
+            z-index: 100;
+        }
+        .skip-link:focus { top: 0; }
+        
+        /* Header — Stripe pattern */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 50;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-3) var(--space-4);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .logo-container img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: var(--text-lg);
+            color: var(--deep-blue);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-5);
+            list-style: none;
+        }
+        
+        .nav-links a {
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+        
+        .btn {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            padding: var(--space-2) var(--space-4);
+            border-radius: 6px;
+            transition: all var(--transition-fast);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #B39662;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--deep-blue);
+            border: 2px solid var(--gray-300);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: var(--text-2xl);
+            color: var(--deep-blue);
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: var(--space-4);
+                border-bottom: 1px solid var(--gray-200);
+                gap: var(--space-3);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        /* Section Container */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-4);
+        }
+        
+        /* Hero — Linear pattern (LEFT-ALIGNED) */
+        .hero {
+            padding: var(--space-10) var(--space-4);
+            background: var(--cream);
+        }
+        
+        .hero-content {
+            max-width: 800px; /* Left-aligned, not centered */
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: var(--space-1) var(--space-3);
+            background: white;
+            border: 1px solid var(--gray-300);
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--text-sm);
+            color: var(--gray-700);
+            margin-bottom: var(--space-4);
+        }
+        
+        .hero h1 {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-4);
+            max-width: 20ch;
+        }
+        
+        .hero p {
+            font-size: var(--text-lg);
+            color: var(--gray-600);
+            margin-bottom: var(--space-6);
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--space-3);
+            flex-wrap: wrap;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--deep-blue);
+            color: white;
+            padding: var(--space-3) 0;
+        }
+        
+        .trust-items {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            text-align: center;
+        }
+        
+        .trust-item {
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--text-sm);
+            font-weight: 500;
+        }
+        
+        .trust-item strong {
+            color: var(--gold);
+            font-size: var(--text-base);
+        }
+        
+        /* Service Cards — Stripe pattern */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-5);
+            margin-top: var(--space-6);
+        }
+        
+        .service-card {
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            padding: var(--space-5);
+            transition: all var(--transition-normal);
+        }
+        
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        .service-card h3 {
+            color: var(--deep-blue);
+            margin-bottom: var(--space-3);
+        }
+        
+        .service-card p {
+            color: var(--gray-600);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-4);
+        }
+        
+        .service-examples {
+            list-style: none;
+            margin-bottom: var(--space-4);
+        }
+        
+        .service-examples li {
+            padding: var(--space-2) 0;
+            padding-left: var(--space-4);
+            position: relative;
+            font-size: var(--text-sm);
+            color: var(--gray-700);
+        }
+        
+        .service-examples li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            padding: var(--space-1) var(--space-2);
+            background: var(--gray-100);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--deep-blue);
+            margin-bottom: var(--space-3);
+        }
+        
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: var(--space-4);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            background: var(--gold);
+            color: white;
+            border-radius: 50%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-3);
+        }
+        
+        .process-step h3 {
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-2);
+        }
+        
+        .process-step p {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+            margin: 0 auto;
+        }
+        
+        /* FAQ Accordion */
+        .faq-list {
+            max-width: 800px;
+            margin: var(--space-6) auto 0;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: var(--space-4) 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--text-base);
+            font-weight: 600;
+            color: var(--deep-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            color: var(--gold);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-normal);
+        }
+        
+        .faq-answer.active {
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            padding-bottom: var(--space-4);
+            color: var(--gray-700);
+        }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+        }
+        
+        .contact-box {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: var(--space-4);
+            text-align: center;
+        }
+        
+        .contact-box h3 {
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-2);
+        }
+        
+        .contact-box p {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+            margin: 0 auto var(--space-3);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-400);
+            padding: var(--space-7) var(--space-4) var(--space-4);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-6);
+        }
+        
+        .footer-section h4 {
+            color: white;
+            font-size: var(--text-base);
+            margin-bottom: var(--space-3);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: var(--space-2);
+        }
+        
+        .footer-section a {
+            color: var(--gray-400);
+            font-size: var(--text-sm);
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: var(--space-6) auto 0;
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--gray-800);
+            text-align: center;
+            font-size: var(--text-sm);
+        }
+        
+        /* Floating CTAs */
+        .floating-cta {
+            position: fixed;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+            z-index: 100;
+        }
+        
+        .float-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all var(--transition-fast);
+        }
+        
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float {
+            background: #25D366;
+            color: white;
+        }
+        
+        .faq-float {
+            background: var(--gold);
+            color: white;
+        }
+        
+        /* Chatbot */
+        .chatbot {
+            display: none;
+            position: fixed;
+            bottom: 120px;
+            right: var(--space-4);
+            width: 350px;
+            max-height: 500px;
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            z-index: 99;
+        }
+        
+        .chatbot.active {
+            display: block;
+        }
+        
+        .chatbot-header {
+            background: var(--deep-blue);
+            color: white;
+            padding: var(--space-3);
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-header h3 {
+            color: white;
+            font-size: var(--text-base);
+            margin: 0;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: var(--text-xl);
+            cursor: pointer;
+        }
+        
+        .chatbot-messages {
+            height: 350px;
+            overflow-y: auto;
+            padding: var(--space-3);
+        }
+        
+        .chat-message {
+            margin-bottom: var(--space-3);
+            padding: var(--space-2) var(--space-3);
+            border-radius: 8px;
+            font-size: var(--text-sm);
+        }
+        
+        .bot-message {
+            background: var(--gray-100);
+            color: var(--gray-800);
+        }
+        
+        .user-message {
+            background: var(--gold);
+            color: white;
+            margin-left: auto;
+            max-width: 80%;
+        }
+        
+        .chatbot-input {
+            border-top: 1px solid var(--gray-200);
+            padding: var(--space-3);
+            display: flex;
+            gap: var(--space-2);
+        }
+        
+        .chatbot-input input {
+            flex: 1;
+            padding: var(--space-2);
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-family: 'Lora', serif;
+        }
+        
+        .chatbot-input button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: var(--space-2) var(--space-4);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot {
+                width: calc(100vw - 32px);
+                right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-200px.png" alt="PROVADAL TECH RESOURCES Logo">
+                <span class="logo-text">PROVADAL</span>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#track-record">Track Record</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://wa.me/2348144202347?text=Hi%20PROVADAL%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-primary">Free Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item"><strong>7+</strong> Businesses Served</div>
+            <div class="trust-item"><strong>4.5★</strong> Google Reviews</div>
+            <div class="trust-item"><strong>99.9%</strong> Uptime (Solar Powered)</div>
+            <div class="trust-item"><strong>Same-Day</strong> Response</div>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Based in Nnewi • Serving Anambra State • Nigeria-wide Digital Services</div>
+            <h1>Custom Technology Solutions for Nnewi Businesses</h1>
+            <p>From Google visibility to local AI agents — we build exactly what your business needs. Serving small shops to established enterprises across Anambra State with in-person services, and Nigeria-wide with digital solutions. No packages. No monthly subscriptions. Just custom solutions.</p>
+            <p style="font-size: 0.9rem; color: var(--gray-600); margin-bottom: var(--space-6);">
+                <strong>Our Services:</strong> Computer repair, website design, IT support, CCTV installation, network security, data backup, business automation, AI solutions, Google Business Profile management, and co-working space in Nnewi, Onitsha, Awka, and across Anambra State.
+            </p>
+            <div class="hero-cta">
+                <a href="https://wa.me/2348144202347?text=Hi%20PROVADAL%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-primary">Free Consultation →</a>
+                <a href="#services" class="btn btn-secondary">See What We Build</a>
+            </div>
+        </div>
+    </section>
+    
+    <main id="main">
+        <!-- Services Section -->
+        <section id="services">
+            <h2>What We Build</h2>
+            <p>Every business is different. Every challenge is unique. We don't do packages — we build exactly what YOU need.</p>
+            
+            <div class="services-grid">
+                <!-- Digital Visibility -->
+                <div class="service-card">
+                    <h3>🔍 Digital Visibility</h3>
+                    <div class="price-tag">From ₦10K/month</div>
+                    <p>Get found on Google. Build trust online. Reach more customers.</p>
+                    <ul class="service-examples">
+                        <li>Google Business Profile (₦15-20K setup + ₦10K/mo)</li>
+                        <li>Basic websites (₦75K-200K, SEO included)</li>
+                        <li>Advanced websites (₦200K-800K, full features)</li>
+                        <li>Social media setup</li>
+                    </ul>
+                    <a href="https://wa.me/2348144202347?text=I%20need%20help%20with%20digital%20visibility" class="btn btn-primary">Get Quote →</a>
+                </div>
+                
+                <!-- AI & Automation -->
+                <div class="service-card">
+                    <h3>🤖 AI & Automation</h3>
+                    <div class="price-tag">₦120K-2M (custom)</div>
+                    <p>Local AI agents. Computer vision. Custom software that runs on YOUR hardware — no cloud fees.</p>
+                    <ul class="service-examples">
+                        <li>AI camera monitoring (₦120K-400K upgrade)</li>
+                        <li>Meeting booking systems</li>
+                        <li>Customer records & CRM</li>
+                        <li>Business automation software</li>
+                        <li>Local AI agents (runs offline)</li>
+                    </ul>
+                    <a href="https://wa.me/2348144202347?text=I%20need%20custom%20automation" class="btn btn-primary">Get Quote →</a>
+                </div>
+                
+                <!-- Hardware & Business Security -->\n                <div class="service-card">\n                    <h3>🔒 Hardware & Business Security</h3>\n                    <div class="price-tag">₦5K-400K</div>\n                    <p>From computer repairs to complete security systems — CCTV cameras, network security, data backup, and smart automation.</p>\n                    <ul class="service-examples">\n                        <li>CCTV camera installation & AI monitoring (₦100K-400K)</li>\n                        <li>Network security & Wi-Fi setup (₦30K-100K)</li>\n                        <li>Data backup & recovery (₦25K-100K)</li>\n                        <li>Computer repair & diagnosis (₦5K-50K)</li>\n                        <li>Smart home automation (₦50K-300K)</li>\n                        <li>Password management & 2FA (₦10K-50K)</li>\n                    </ul>\n                    <a href="https://wa.me/2348144202347?text=I%20need%20security%20or%20hardware%20support" class="btn btn-primary">Get Quote →</a>\n                </div>
+                
+                <!-- Co-Working Space -->
+                <div class="service-card">
+                    <h3>💼 Co-Working Space</h3>
+                    <div class="price-tag">₦3K/day</div>
+                    <p>Professional workspace with Starlink internet + 4KVA solar power. Work without NEPA stress.</p>
+                    <ul class="service-examples">
+                        <li>High-speed Starlink internet</li>
+                        <li>99.9% power uptime (solar)</li>
+                        <li>Professional environment</li>
+                        <li>Network with other tech freelancers</li>
+                        <li>Perfect for remote work, meetings</li>
+                    </ul>
+                    <a href="https://wa.me/2348144202347?text=I%20want%20to%20book%20the%20co-working%20space" class="btn btn-primary">Book Space →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How It Works -->
+        <section id="how-it-works" style="background: var(--gray-50);">
+            <h2>How We Work</h2>
+            <p>Simple. Transparent. Custom.</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>Tell us your challenge. 30-minute conversation via WhatsApp or in-person.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Quote</h3>
+                    <p>We send a detailed quote within 1-3 days. Transparent pricing. No hidden fees.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Build Together</h3>
+                    <p>We build your solution. Weekly updates. You see progress every step.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Deliver & Support</h3>
+                    <p>Complete delivery. Training included. Optional ongoing support available.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Track Record -->
+        <section id="track-record">
+            <h2>Real Track Record</h2>
+            <p>We're building our portfolio. That means founder pricing (40-50% below agencies). You get quality at early-stage rates.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>📊 Current Momentum</h3>
+                    <ul class="service-examples">
+                        <li>7 businesses on Google Business Profile</li>
+                        <li>2 more clients signed this week</li>
+                        <li>Target: 10-20 businesses this quarter</li>
+                        <li>Vision: 20-50 businesses in Nnewi (network effect)</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>💻 Delivered Projects</h3>
+                    <ul class="service-examples">
+                        <li>NZE Automobile website</li>
+                        <li>Event company booking system (custom CRM)</li>
+                        <li>This website (proof of capability)</li>
+                        <li>7+ GBP setups & management</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>⚡ Infrastructure</h3>
+                    <ul class="service-examples">
+                        <li>4KVA solar system (99.9% uptime)</li>
+                        <li>Starlink internet (reliable connectivity)</li>
+                        <li>Professional co-working space</li>
+                        <li>Zero NEPA dependency for delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us -->
+        <section style="background: var(--cream);">
+            <h2>Why Choose PROVADAL?</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🎯 100% Custom</h3>
+                    <p>No packages. No monthly subscriptions. We build exactly what you need — nothing more, nothing less.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>💰 Transparent Pricing</h3>
+                    <p>Founder pricing (40-50% below agencies). Clear quotes. No hidden fees. Payment plans available.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>⚡ Solar Powered</h3>
+                    <p>99.9% uptime. NEPA doesn't stop our work. Your deadlines are safe with us.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🏠 Local to Nnewi</h3>
+                    <p>Based in Anambra. We understand local business challenges. Visit our co-working space anytime.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🤖 Local AI Expertise</h3>
+                    <p>AI that runs on YOUR hardware. No cloud subscriptions. Data privacy. Works offline.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🌱 Tech Community Hub</h3>
+                    <p>We're building Nnewi's tech network. Co-working space connects you with other businesses and freelancers.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How much will my project cost?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every project is different, so we give custom quotes. GBP management starts at ₦10K/month. Basic websites ₦75K-200K. Advanced websites ₦200K-800K. AI automation ₦120K-2M. Free consultation to discuss your exact needs and budget.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Do you offer packages or monthly subscriptions?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No fixed packages. We build custom solutions for each client's unique challenge. Some services have ongoing management (like GBP ₦10K/month), but most projects are one-time builds with optional support.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What payment methods do you accept?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cash, bank transfer, or POS. For larger projects (₦100K+), we offer payment plans: 50% deposit to start, 50% on completion. Flexible terms available for established businesses.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How long does a project take?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>GBP setup: 3-5 days. Basic website: 1-2 weeks. Advanced website: 2-4 weeks. Custom software: 4-8 weeks depending on features. We give exact timelines in the quote.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Do you offer support after delivery?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. All projects include 30-day warranty for bugs/fixes. Ongoing support and maintenance available as separate service. Training included for all custom software.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Where are you located?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nnewi, Anambra State. We serve clients in-person (Anambra), remote (Nigeria-wide), and internationally (digital services). Co-working space available for meetings and collaboration.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What makes local AI different from cloud AI?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Local AI runs on YOUR hardware (no monthly cloud fees). Your data stays private, works offline, and you own the system completely. Perfect for camera monitoring, automation, and sensitive business data.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Can you upgrade my existing CCTV cameras with AI?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Most existing cameras can get AI monitoring for ₦80K-150K (vs ₦450K+ for new system). We add people detection, vehicle counting, WhatsApp alerts — all running locally on your hardware.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Do you offer data backup and recovery?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. We set up automated cloud backup (Google Drive, OneDrive) or local backup (external drives) starting from ₦25K. Monthly monitoring ₦5-10K. Recovery services available if disaster strikes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section style="background: var(--deep-blue); color: white; text-align: center;">
+            <h2 style="color: white;">Start With a Free Consultation</h2>
+            <p style="color: var(--gray-300); max-width: 600px; margin: 0 auto var(--space-6);">Tell us your challenge. We'll send a custom quote within 1-3 days. No obligation.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-box" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2);">
+                    <h3 style="color: white;">📱 WhatsApp</h3>
+                    <p style="color: var(--gray-300);">Fastest response</p>
+                    <a href="https://wa.me/2348144202347?text=Hi%20PROVADAL%2C%20I%27d%20like%20a%20free%20consultation" class="btn btn-primary">Message Us</a>
+                </div>
+                
+                <div class="contact-box" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2);">
+                    <h3 style="color: white;">📞 Phone</h3>
+                    <p style="color: var(--gray-300);">Call anytime</p>
+                    <a href="tel:+2348144202347" class="btn btn-primary">0814 420 2347</a>
+                </div>
+                
+                <div class="contact-box" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2);">
+                    <h3 style="color: white;">📧 Email</h3>
+                    <p style="color: var(--gray-300);">For detailed inquiries</p>
+                    <a href="mailto:architect@provadal.com" class="btn btn-primary">Send Email</a>
+                </div>
+                
+                <div class="contact-box" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2);">
+                    <h3 style="color: white;">📍 Visit Us</h3>
+                    <p style="color: var(--gray-300);">Co-working space</p>
+                    <a href="https://maps.app.goo.gl/qjcTJwPLEfdEUDFD8" class="btn btn-primary">Get Directions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>PROVADAL TECH</h4>
+                <p style="font-size: var(--text-sm);">Custom technology solutions for Nnewi businesses. From Google visibility to local AI agents.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Digital Visibility</a></li>
+                    <li><a href="#services">AI & Automation</a></li>
+                    <li><a href="#services">Hardware & Smart Systems</a></li>
+                    <li><a href="#services">Co-Working Space</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#track-record">Track Record</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://wa.me/2348144202347">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+2348144202347">0814 420 2347</a></li>
+                    <li><a href="mailto:architect@provadal.com">architect@provadal.com</a></li>
+                    <li><a href="https://maps.app.goo.gl/qjcTJwPLEfdEUDFD8">Nnewi, Anambra State</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 PROVADAL TECH RESOURCES. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Floating CTAs -->
+    <div class="floating-cta">
+        <a href="https://wa.me/2348144202347?text=Hi%20PROVADAL%2C%20I%27d%20like%20a%20free%20consultation" class="float-btn whatsapp-float" aria-label="WhatsApp">💬</a>
+        <button class="float-btn faq-float" onclick="toggleChatbot()" aria-label="FAQ Assistant">❓</button>
+    </div>
+    
+    <!-- Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <h3>❓ FAQ Assistant</h3>
+            <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="chat-message bot-message">
+                Hi! I'm your FAQ Assistant. I can help answer quick questions about pricing, services, and how we work. What would you like to know?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter') sendMessage()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "PROVADAL TECH RESOURCES",
+        "image": "https://provadal.com/og-image.jpg",
+        "description": "Custom technology solutions for Nigerian businesses - from Google visibility to local AI agents, automation, websites, and hardware services.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nnewi",
+            "addressRegion": "Anambra State",
+            "addressCountry": "NG"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 6.0228879,
+            "longitude": 6.9160781
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "url": "https://provadal.com",
+        "telephone": "+2348144202347",
+        "email": "architect@provadal.com",
+        "priceRange": "₦₦",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "6"
+        },
+        "hasMap": "https://maps.app.goo.gl/qjcTJwPLEfdEUDFD8",
+        "paymentAccepted": "Cash, Bank Transfer, POS",
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Google Business Profile Management",
+                    "description": "Monthly GBP management and optimization"
+                },
+                "price": "10000",
+                "priceCurrency": "NGN",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "10000",
+                    "priceCurrency": "NGN",
+                    "unitText": "MONTH"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Website Development",
+                    "description": "Custom business websites with SEO"
+                },
+                "priceRange": "₦75,000 - ₦800,000"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI & Business Automation",
+                    "description": "Local AI agents and custom automation software"
+                },
+                "priceRange": "₦120,000 - ₦2,000,000"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "CCTV & Security Systems",
+                    "description": "CCTV installation and AI-powered camera monitoring"
+                },
+                "priceRange": "₦100,000 - ₦400,000"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Network Security & Wi-Fi Setup",
+                    "description": "Business network security and professional Wi-Fi configuration"
+                },
+                "priceRange": "₦30,000 - ₦100,000"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Data Backup & Recovery",
+                    "description": "Automated cloud and local backup solutions"
+                },
+                "priceRange": "₦25,000 - ₦100,000"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Co-Working Space",
+                    "description": "Professional workspace with solar power and Starlink"
+                },
+                "price": "3000",
+                "priceCurrency": "NGN",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "3000",
+                    "priceCurrency": "NGN",
+                    "unitText": "DAY"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much will my project cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Every project is different, so we give custom quotes. GBP management starts at ₦10K/month. Basic websites ₦75K-200K. Advanced websites ₦200K-800K. AI automation ₦120K-2M. Free consultation to discuss your exact needs and budget."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer packages or monthly subscriptions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No fixed packages. We build custom solutions for each client's unique challenge. Some services have ongoing management (like GBP ₦10K/month), but most projects are one-time builds with optional support."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does a project take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GBP setup: 3-5 days. Basic website: 1-2 weeks. Advanced website: 2-4 weeks. Custom software: 4-8 weeks depending on features. We give exact timelines in the quote."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What makes local AI different from cloud AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Local AI runs on YOUR hardware (computer, Raspberry Pi, server). Benefits: No monthly cloud fees, data stays private on your network, works offline without internet, one-time cost instead of subscription. Perfect for camera monitoring, automation, and business intelligence."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        
+        // FAQ Accordion
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(a => {
+                a.classList.remove('active');
+            });
+            document.querySelectorAll('.faq-question span').forEach(s => {
+                s.textContent = '+';
+            });
+            
+            // Open clicked (if was closed)
+            if (!isOpen) {
+                answer.classList.add('active');
+                button.querySelector('span').textContent = '−';
+            }
+        }
+        
+        // Chatbot Toggle
+        function toggleChatbot() {
+            document.getElementById('chatbot').classList.toggle('active');
+        }
+        
+        // Chatbot Logic
+        const chatResponses = {
+            'price|cost|how much|pricing|fee|charge': 'GBP management: ₦10K/month. Basic websites: ₦75K-200K. Advanced websites: ₦200K-800K. AI automation: ₦120K-2M. Co-working: ₦3K/day. For exact quote, WhatsApp us: https://wa.me/2348144202347',
+            
+            'gbp|google business|profile|visibility|local seo': 'We set up and manage Google Business Profiles. Setup: ₦15-20K one-time. Monthly management: ₦10K/month. This helps you show up on Google Maps and local search. Currently managing 7+ businesses.',
+            
+            'website|site|web design|landing page': 'Custom websites tailored to your business. Basic (₦75K-200K) includes 3-5 pages + SEO. Advanced (₦200K-800K) includes full features, booking systems, custom design. All mobile-friendly.',
+            
+            'ai|automation|software|crm|booking': 'We build custom AI and automation solutions. Local AI agents (runs on your hardware, no cloud fees), computer vision for cameras (₦120K-400K), booking systems, CRM, business software. Everything custom-built for your needs.',
+            
+            'camera|security|cctv|surveillance': 'We upgrade existing cameras with AI monitoring. Our system watches your cameras 24/7, detects people/vehicles/anomalies, sends WhatsApp alerts. ₦120K-400K vs ₦450K+ for new system.',
+            
+            'hardware|repair|computer|laptop|screen': 'Computer diagnosis: ₦5K. Screen replacement: ₦20K-35K. Full repairs: ₦5K-50K depending on issue. We also do home automation and Raspberry Pi projects (₦50K-300K).',
+            
+            'coworking|workspace|office|space|rent': 'Professional co-working space: ₦3K/day. Includes Starlink internet + 4KVA solar power (99.9% uptime). Perfect for freelancers, remote workers, meetings. No NEPA stress!',
+            
+            'hours|when|time|open|available': 'Monday-Saturday: 8AM-6PM. Sunday: Closed (emergencies only). Same-day response on WhatsApp. Free consultations available anytime.',
+            
+            'location|address|where|visit|map': 'We\'re in Nnewi, Anambra State. Exact location: https://maps.app.goo.gl/qjcTJwPLEfdEUDFD8. Serve in-person (Anambra), remote (Nigeria-wide), international (digital services).',
+            
+            'contact|whatsapp|phone|email|call': 'WhatsApp (fastest): https://wa.me/2348144202347 | Phone: 0814 420 2347 | Email: architect@provadal.com',
+            
+            'payment|pay|deposit|installment|plan': 'We accept cash, bank transfer, or POS. Projects ₦100K+ available on payment plan: 50% deposit to start, 50% on completion. Flexible terms for established businesses.',
+            
+            'how long|timeline|duration|delivery': 'GBP: 3-5 days. Basic website: 1-2 weeks. Advanced website: 2-4 weeks. Custom software: 4-8 weeks. Exact timeline in your quote.',
+            
+            'support|warranty|guarantee|maintenance': 'All projects include 30-day warranty for bugs/fixes. Training included for custom software. Ongoing support available as separate service.',
+            
+            'solar|power|electricity|nepa|uptime': 'We run on 4KVA solar system. 99.9% uptime — NEPA doesn\'t stop our work or your deadlines. Perfect for reliable delivery.',
+            
+            'portfolio|clients|work|examples|track record': 'Currently serving 7+ businesses (2 more just signed!). Built NZE Automobile website, event company booking system, this website. Targeting 10-20 businesses this quarter.',
+            
+            'package|subscription|monthly|recurring': 'We don\'t do fixed packages. Every business is different — we build custom solutions. Some services (GBP) have optional monthly management, but most are one-time projects.',
+            
+            'quote|consultation|start|begin|inquiry': 'Start with FREE 30-minute consultation. Tell us your challenge. We send custom quote within 1-3 days. No obligation. WhatsApp: https://wa.me/2348144202347',
+            
+            'hi|hello|hey|good morning|good afternoon|greetings': 'Hello! 👋 I can help with quick questions about our services, pricing, and how we work. What would you like to know?',
+            
+            'thanks|thank you|great|perfect|ok': 'You\'re welcome! Need anything else, or ready for a free consultation? WhatsApp us: https://wa.me/2348144202347 😊'
+        };
+        
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const messagesContainer = document.getElementById('chatMessages');
+            const userMessage = input.value.trim().toLowerCase();
+            
+            if (!userMessage) return;
+            
+            // Add user message
+            const userDiv = document.createElement('div');
+            userDiv.className = 'chat-message user-message';
+            userDiv.textContent = input.value;
+            messagesContainer.appendChild(userDiv);
+            
+            // Find response
+            let botResponse = 'I can help with questions about pricing, services, location, payment, timelines, and how we work. Try asking about "website pricing", "GBP cost", "AI automation", or "how to start". For detailed questions, WhatsApp us: https://wa.me/2348144202347';
+            
+            for (const [keywords, response] of Object.entries(chatResponses)) {
+                const patterns = keywords.split('|');
+                if (patterns.some(pattern => userMessage.includes(pattern))) {
+                    botResponse = response;
+                    break;
+                }
+            }
+            
+            // Add bot response
+            setTimeout(() => {
+                const botDiv = document.createElement('div');
+                botDiv.className = 'chat-message bot-message';
+                botDiv.innerHTML = botResponse;
+                messagesContainer.appendChild(botDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 500);
+            
+            input.value = '';
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>
